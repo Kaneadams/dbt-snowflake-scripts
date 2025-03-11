@@ -1,1 +1,1 @@
-select  * from {{ source('customer', 'customers') }} left join {{ source('customer', 'Orders') }}   on {{ source('customer', 'customers') }}.customerid={{ source('customer', 'Orders') }}.customerid
+select {{ source('customer', 'customers') }}.customerid, Firstname , Lastname from {{ source('customer', 'customers') }} left join {{ source('customer', 'Orders') }}   on {{ source('customer', 'customers') }}.customerid={{ source('customer', 'Orders') }}.customerid

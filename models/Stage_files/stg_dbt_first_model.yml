@@ -4,6 +4,7 @@ models:
   - name: dbt_first_model
     columns: 
       - name: CUSTOMERID
+        description: primary key
         tests:
-          - unique
-         
+        - unique
+        - not_null
